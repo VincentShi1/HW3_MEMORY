@@ -1,0 +1,39 @@
+DATA STRUCTURE 
+* NO STL CONTAINER CLASSES 
+    NO VECTORS
+
+
+*Assume all matrix contain doubles
+*Size of matrix with "m" rows and "n" columns 
+*Uses a 2d array for storing info within the matrix, and using a dyanmic memory for any size matrix
+*private section is pretty small
+*Heavy emphasis on the usage of dynamic memory
+
+
+IMPLEMENATION
+*Write a constructor with 2 unsigned int parameter, rows count and columns count, and a double fill value
+*Create a data representation (not image so ig just having info )of row * columns matrix
+*All values are initialized to fill
+*If either dimension is 0, matrix = 0x0
+*Matrixes are equal if and only if they have the same value in every position 
+
+*Implement num rows() and num cols() return number of rows and columns in the matrix respectively
+*Implement a clear() method, reset the number of rows and column to zero, and deallocate any memory
+*Implement a bool get(row, column, double), if the row and column are within the bounds of the matrix, then the value at row,col ([row],[col]) would be stored in the double
+*Implement a bool set(row, column, double), if the position is within the bound, then return true and set [row],[col] to the double value
+
+MATRIX OPERATIONS
+*Implement multiply_by_coefficient(double): multiply every element in the matrix by the double.
+*Implement bool swap_row(unsigned int, unsigned int): takes in a source row and a target row,
+if both rows are within the matrix, swap the two rows and return true,
+*Implement void transpose() to flip the matrix, (just do a for loop with j first instead of i)
+*Implement two bool method within class definition that takes in one arguement: a Matrix Object B. aim to modify the original matrix A if A and B's dimension match. If true, modify A accordingly, either add or subtract 
+
+HARDER SHIT
+*Implement get_rows() and get_cols(). Both takes one unsigned int and return a double*. 
+for rows: arguemt is num of rows to retrieve, col: num of col to retrieve
+If the requested row/column is outside of bound, return a pointer set to NULL 
+*Implement qurater() takes no argument and returns a Matrix* containing 4 new elements: 
+an Upper Left quadrant, an Upper Right quadrant, an Lower Left quadrant, and a Lower Right quadrant. All quad is the same size. 
+
+//maybe return 
